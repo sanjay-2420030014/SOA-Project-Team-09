@@ -1,0 +1,19 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: library-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/library_fine_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 2420030014@sanjay
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
